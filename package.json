@@ -1,0 +1,30 @@
+{
+  "name": "electron-start",
+  "version": "1.10.0",
+  "description": "Start a js app",
+  "bin": {
+    "electron-start": "bin/start.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "electron": "^3.0.10",
+    "electron-devtools-installer": "^2.2.4",
+    "minimist": "^1.2.0"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshwnj/electron-start.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshwnj/electron-start/issues"
+  },
+  "homepage": "https://github.com/joshwnj/electron-start#readme"
+}
