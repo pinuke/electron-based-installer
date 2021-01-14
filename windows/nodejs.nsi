@@ -8,7 +8,7 @@ SilentInstall silent
 /*--- Change these as you see fit ---*/
 Name "NSIS-nodejs-installer"
 OutFile "installer.exe"
-InstallDir "$APPDATA\NSIS-nodejs-installer" /* this is the directory where the nodejs installer and install.js get downloaded to */
+InstallDir "$APPDATA\electron-based-installer" /* this is the directory where the nodejs installer and install.js get downloaded to */
 /*-----------------------------------*/
 
 
@@ -43,7 +43,6 @@ Section
   nsExec::ExecToStack '"node" "--version"'
     Pop $0
     Pop $1
-    MessageBox MB_OK|MB_ICONEXCLAMATION "debug $1" /SD IDOK
     StrCpy $2 $1 1
     StrCmp $2 "v" nInstallSucc 0 ; if it is installed, it will return vX.X.X, so we check for "v" then skip the install
 /*---------------------------------------------------------------*/
@@ -59,6 +58,13 @@ Section
     StrCmp $0 0 nInstallSucc 0
     StrCmp $0 1602 nInstallSucc 0
     MessageBox MB_OK|MB_ICONEXCLAMATION "Installer failed, because Nodejs install exited with exit code $0. Click OK to abort install" /SD IDOK
+    Quit
+  nsExec::ExecToStack '"node" "--version"'
+    Pop $0
+    Pop $1
+    StrCpy $2 $1 1
+    StrCmp $2 "v" nInstallSucc 0 ; verifies installation
+    MessageBox MB_OK|MB_ICONEXCLAMATION "Installer failure detected, because 'node -v' returned a bad value. Additionally, Nodejs install exited with exit code $0. Click OK to abort install" /SD IDOK
     Quit
   nInstallSucc:
 /*------------------------------------------------------------------------------------------*/
