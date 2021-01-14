@@ -5,26 +5,17 @@
   "bin": {
     "electron-start": "bin/start.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "joshwnj",
+  "author": "smartguy1196",
   "license": "MIT",
   "dependencies": {
-    "chokidar": "^2.0.4",
-    "electron": "^3.0.10",
-    "electron-devtools-installer": "^2.2.4",
-    "minimist": "^1.2.0"
+    "electron": "^11.1.1"
   },
-  "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshwnj/electron-start.git"
+    "url": "git+https://github.com/smartguy1196/electron-based-installer.git"
   },
   "bugs": {
-    "url": "https://github.com/joshwnj/electron-start/issues"
+    "url": "https://github.com/smartguy1196/electron-based-installer/issues"
   },
-  "homepage": "https://github.com/joshwnj/electron-start#readme"
+  "homepage": "https://github.com/smartguy1196/electron-based-installer#readme"
 }
