@@ -3,9 +3,9 @@
   "version": "1.10.0",
   "description": "Start a js app",
   "bin": {
-    "create-ebi": "bin/installer.js"
+    "create-installer": "main.js"
   },
-  "main": "bin/installer.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
