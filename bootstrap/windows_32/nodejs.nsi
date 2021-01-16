@@ -47,7 +47,7 @@ Section
     StrCmp $2 "v" nInstallSucc 0 ; if it is installed, it will return vX.X.X, so we check for "v" then skip the install
 /*---------------------------------------------------------------*/
 /*--- downloads the node install .msi (version 14.15.3 x64 - change this url regularly!) ---*/
-  inetc::get "https://nodejs.org/dist/v14.15.3/node-v14.15.3-x64.msi" "$INSTDIR\node.msi"
+  inetc::get "https://nodejs.org/dist/v14.15.4/node-v14.15.4-x86.msi" "$INSTDIR\node.msi"
   Pop $0
     StrCmp $0 "OK" dlok
     MessageBox MB_OK|MB_ICONEXCLAMATION "Nodejs download Error, click OK to abort installation" /SD IDOK
