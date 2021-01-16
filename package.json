@@ -3,7 +3,11 @@
   "version": "1.10.0",
   "description": "Start a js app",
   "bin": {
-    "electron-start": "bin/start.js"
+    "create-ebi": "bin/installer.js"
+  },
+  "main": "bin/installer.js",
+  "scripts": {
+    "start": "electron ."
   },
   "author": "smartguy1196",
   "license": "MIT",
