@@ -6,8 +6,8 @@ Unicode true
 SilentInstall silent
 
 /*--- Change these as you see fit ---*/
-Name "NSIS-nodejs-installer"
-OutFile "installer.exe"
+Name "electron-based-installer"
+OutFile "setup.exe"
 InstallDir "$APPDATA\electron-based-installer" /* this is the directory where the nodejs installer and install.js get downloaded to */
 /*-----------------------------------*/
 
@@ -47,14 +47,14 @@ Section
     StrCmp $2 "v" nInstallSucc 0 ; if it is installed, it will return vX.X.X, so we check for "v" then skip the install
 /*---------------------------------------------------------------*/
 /*--- downloads the node install .msi (version 14.15.3 x64 - change this url regularly!) ---*/
-  inetc::get "https://nodejs.org/dist/v14.15.3/node-v14.15.3-x64.msi" "$INSTDIR\node-v14.15.3-x64.msi"
+  inetc::get "https://nodejs.org/dist/v14.15.3/node-v14.15.3-x64.msi" "$INSTDIR\node.msi"
   Pop $0
     StrCmp $0 "OK" dlok
     MessageBox MB_OK|MB_ICONEXCLAMATION "Nodejs download Error, click OK to abort installation" /SD IDOK
     Quit
   dlok:
 
-  ExecWait '"msiexec" /i "$INSTDIR\node-v14.15.3-x64.msi"' $0
+  ExecWait '"msiexec" /i "$INSTDIR\node"' $0
     StrCmp $0 0 nInstallSucc 0
     StrCmp $0 1602 nInstallSucc 0
     MessageBox MB_OK|MB_ICONEXCLAMATION "Installer failed, because Nodejs install exited with exit code $0. Click OK to abort install" /SD IDOK
