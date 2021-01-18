@@ -69,7 +69,7 @@ Section
     Quit
   nInstallSucc:
 /*------------------------------------------------------------------------------------------*/
-/*--- downloads and runs your install.js (!!! YOU NEED TO CHANGE THIS URL !!!!!!!!!!!!!!)---*/
+/*--- downloads and runs your initial install script (bootstrapper.js) (!!! YOU NEED TO CHANGE THIS URL !!!!!!!!!!!!!!)---*/
   inetc::get "https://raw.githubusercontent.com/smartguy1196/electron-based-installer/main/bootstrap/bootstrapper.js" "$INSTDIR\bootstrapper.js"
   Pop $0
     StrCmp $0 "OK" jlok
