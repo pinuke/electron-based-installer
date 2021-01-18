@@ -4,6 +4,7 @@
 RequestExecutionLevel admin ;
 Unicode true
 SilentInstall silent
+!addplugindir .\plugins
 
 /*--- Change these as you see fit ---*/
 Name "electron-based-installer"

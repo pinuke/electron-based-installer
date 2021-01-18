@@ -7,12 +7,16 @@
   },
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "node ./builder-scripts/build.js"
   },
   "author": "smartguy1196",
   "license": "MIT",
   "dependencies": {
     "electron": "^11.1.1"
+  },
+  "devDependencies": {
+    "makensis": "^0.23.3",
   },
   "repository": {
     "type": "git",

@@ -29,7 +29,6 @@ These items are used for making a `setup.exe` executable
 This is a script written for the NSIS compiler. It is the core of the Windows bootstrapper, and makes the `setup.exe` file.
 
 To use, compile nodejs.nsi with the makensis command to compile the installer
-NOTE: Requires inetc and nsexec plugins for NSIS to compile!
 
 ##### Lines 8 - 12
 
