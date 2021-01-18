@@ -12,4 +12,4 @@ console.log = function(d) { //
 
 console.log( "Nodejs installed. Running 'npm init @electron-based/installer' from install.js..." )
 
-execSync( "npm init @electron-based/installer" )
+execSync( "npx @electron-based/installer" )

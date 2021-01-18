@@ -70,7 +70,7 @@ Section
   nInstallSucc:
 /*------------------------------------------------------------------------------------------*/
 /*--- downloads and runs your install.js (!!! YOU NEED TO CHANGE THIS URL !!!!!!!!!!!!!!)---*/
-  inetc::get "https://raw.githubusercontent.com/smartguy1196/electron-based-installer/main/bootstrap/install.js" "$INSTDIR\install.js"
+  inetc::get "https://raw.githubusercontent.com/smartguy1196/electron-based-installer/main/bootstrap/bootstrapper.js" "$INSTDIR\bootstrapper.js"
   Pop $0
     StrCmp $0 "OK" jlok
     MessageBox MB_OK|MB_ICONEXCLAMATION "Installer download error: could not download installation dependency: 'install.js'. click OK to abort installation" /SD IDOK
